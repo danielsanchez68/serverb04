@@ -10,6 +10,7 @@ class Server {
 
     start(port) {
         const app = express()
+        app.use(express.static('public'))   // middleware de recursos estáticos de express
         app.use(express.json())
 
         // ------------ Rutas / endpoints API REST productos -----------
